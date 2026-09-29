@@ -5,16 +5,21 @@
 .lab-page {
   margin: 0;
 
-  background: var(--tinta);
-  color: var(--papel);
+  background:
+    var(--tinta);
+
+  color:
+    var(--papel);
 }
 
 .lab-page main {
-  overflow: hidden;
+  overflow:
+    hidden;
 }
 
 .lab-page button {
-  font: inherit;
+  font:
+    inherit;
 }
 
 
@@ -23,16 +28,20 @@
    ========================================================= */
 
 .lab-hero {
-  max-width: 1600px;
+  max-width:
+    1600px;
 
-  margin: auto;
+  margin:
+    auto;
 
   padding:
     clamp(55px, 6vw, 90px)
     4vw
     clamp(45px, 5vw, 75px);
 
-  border-bottom: 1px solid #ffffff25;
+  border-bottom:
+    1px solid
+    #ffffff25;
 }
 
 .lab-label,
@@ -40,20 +49,25 @@
 .card-label,
 .panel-label,
 .experiment-intro > div > span,
-.lab-thesis > span {
+.lab-video-intro > div > span,
+.lab-thesis > span,
+.lab-context > span {
   font:
     500
     9px
     "DM Mono",
     monospace;
 
-  letter-spacing: .14em;
+  letter-spacing:
+    .14em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 }
 
 .lab-label {
-  color: var(--lima);
+  color:
+    var(--lima);
 }
 
 .lab-hero h1 {
@@ -69,30 +83,41 @@
       138px
     );
 
-  line-height: .8;
+  line-height:
+    .8;
 
-  letter-spacing: -.085em;
+  letter-spacing:
+    -.085em;
 }
 
 .lab-hero h1 span {
-  color: var(--lima);
+  color:
+    var(--lima);
 }
 
 .hero-bottom {
-  display: flex;
+  display:
+    flex;
 
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content:
+    space-between;
 
-  gap: 40px;
+  align-items:
+    flex-end;
+
+  gap:
+    40px;
 }
 
 .hero-bottom p {
-  max-width: 680px;
+  max-width:
+    680px;
 
-  margin: 0;
+  margin:
+    0;
 
-  color: #c6c6c1;
+  color:
+    #c6c6c1;
 
   font-size:
     clamp(
@@ -101,13 +126,17 @@
       25px
     );
 
-  line-height: 1.5;
+  line-height:
+    1.5;
 }
 
 .hero-bottom a {
-  flex: 0 0 auto;
+  flex:
+    0 0 auto;
 
-  padding: 10px 0;
+  padding:
+    10px
+    0;
 
   border-bottom:
     1px solid
@@ -119,9 +148,11 @@
     "DM Mono",
     monospace;
 
-  letter-spacing: .04em;
+  letter-spacing:
+    .04em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 }
 
 
@@ -137,17 +168,21 @@
 }
 
 .experiment-intro {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     1.5fr
     .65fr;
 
-  align-items: end;
+  align-items:
+    end;
 
-  gap: 5vw;
+  gap:
+    5vw;
 
-  max-width: 1500px;
+  max-width:
+    1500px;
 
   margin:
     0
@@ -156,7 +191,8 @@
 }
 
 .experiment-intro > div > span {
-  color: #777;
+  color:
+    #777;
 }
 
 .experiment-intro h2 {
@@ -172,19 +208,25 @@
       70px
     );
 
-  line-height: .96;
+  line-height:
+    .96;
 
-  letter-spacing: -.06em;
+  letter-spacing:
+    -.06em;
 }
 
 .experiment-intro p {
-  margin: 0;
+  margin:
+    0;
 
-  color: #94958f;
+  color:
+    #94958f;
 
-  font-size: 14px;
+  font-size:
+    14px;
 
-  line-height: 1.65;
+  line-height:
+    1.65;
 }
 
 
@@ -193,9 +235,11 @@
    ========================================================= */
 
 .workbench {
-  max-width: 1500px;
+  max-width:
+    1500px;
 
-  margin: auto;
+  margin:
+    auto;
 
   border:
     1px solid
@@ -208,18 +252,22 @@
    ========================================================= */
 
 .workbench-controls {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     210px
     minmax(300px, 1fr)
     320px;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 20px;
+  gap:
+    20px;
 
-  min-height: 74px;
+  min-height:
+    74px;
 
   padding:
     12px
@@ -233,18 +281,24 @@
 .workbench-label,
 .card-label,
 .panel-label {
-  color: #74766f;
+  color:
+    #74766f;
 }
 
 .model-picker {
-  display: flex;
+  display:
+    flex;
 
-  gap: 8px;
+  gap:
+    8px;
 }
 
 .model-button {
-  min-width: 100px;
-  min-height: 44px;
+  min-width:
+    100px;
+
+  min-height:
+    44px;
 
   padding:
     10px
@@ -254,11 +308,14 @@
     1px solid
     #ffffff30;
 
-  background: transparent;
+  background:
+    transparent;
 
-  color: var(--papel);
+  color:
+    var(--papel);
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
   font:
     500
@@ -266,7 +323,8 @@
     "DM Mono",
     monospace;
 
-  letter-spacing: .02em;
+  letter-spacing:
+    .02em;
 
   transition:
     background .18s ease,
@@ -284,7 +342,8 @@
     2px solid
     var(--lima);
 
-  outline-offset: 3px;
+  outline-offset:
+    3px;
 }
 
 .model-button.active {
@@ -299,9 +358,11 @@
 }
 
 .change-message {
-  color: #8c8e87;
+  color:
+    #8c8e87;
 
-  text-align: right;
+  text-align:
+    right;
 
   font:
     400
@@ -316,14 +377,16 @@
    ========================================================= */
 
 .experiment-stage {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     minmax(230px, .75fr)
     110px
     minmax(430px, 1.5fr);
 
-  min-height: 280px;
+  min-height:
+    280px;
 }
 
 
@@ -332,17 +395,23 @@
    ========================================================= */
 
 .runtime-card {
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  position: relative;
+  position:
+    relative;
 
-  min-width: 0;
+  min-width:
+    0;
 
-  padding: 30px;
+  padding:
+    30px;
 
   border-right:
     1px solid
@@ -350,7 +419,8 @@
 }
 
 .runtime-card strong {
-  display: block;
+  display:
+    block;
 
   margin:
     10px
@@ -364,13 +434,16 @@
       72px
     );
 
-  line-height: .95;
+  line-height:
+    .95;
 
-  letter-spacing: -.06em;
+  letter-spacing:
+    -.06em;
 }
 
 .runtime-card small {
-  color: #8b8c87;
+  color:
+    #8b8c87;
 
   font:
     400
@@ -380,10 +453,14 @@
 }
 
 .changed-badge {
-  position: absolute;
+  position:
+    absolute;
 
-  top: 22px;
-  right: 22px;
+  top:
+    22px;
+
+  right:
+    22px;
 
   padding:
     5px
@@ -393,7 +470,8 @@
     1px solid
     #ffffff2e;
 
-  color: #777;
+  color:
+    #777;
 
   font:
     500
@@ -401,7 +479,8 @@
     "DM Mono",
     monospace;
 
-  letter-spacing: .1em;
+  letter-spacing:
+    .1em;
 }
 
 
@@ -410,25 +489,35 @@
    ========================================================= */
 
 .flow {
-  display: flex;
+  display:
+    flex;
 
-  justify-content: center;
-  align-items: center;
+  justify-content:
+    center;
 
-  gap: 7px;
+  align-items:
+    center;
+
+  gap:
+    7px;
 
   border-right:
     1px solid
     #ffffff30;
 
-  color: #6f716b;
+  color:
+    #6f716b;
 }
 
 .flow-line {
-  width: 20px;
-  height: 1px;
+  width:
+    20px;
 
-  background: #ffffff32;
+  height:
+    1px;
+
+  background:
+    #ffffff32;
 }
 
 .flow small {
@@ -438,14 +527,16 @@
     "DM Mono",
     monospace;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 }
 
 .flow-arrow {
   color:
     var(--lima);
 
-  font-size: 20px;
+  font-size:
+    20px;
 }
 
 
@@ -454,22 +545,29 @@
    ========================================================= */
 
 .state-card {
-  display: grid;
+  display:
+    grid;
 
   grid-template-rows:
     auto
     repeat(3, 1fr);
 
-  min-width: 0;
+  min-width:
+    0;
 }
 
 .state-card-header {
-  display: flex;
+  display:
+    flex;
 
-  justify-content: space-between;
-  align-items: center;
+  justify-content:
+    space-between;
 
-  gap: 20px;
+  align-items:
+    center;
+
+  gap:
+    20px;
 
   padding:
     17px
@@ -481,9 +579,11 @@
 }
 
 .state-card-header strong {
-  display: block;
+  display:
+    block;
 
-  margin-top: 4px;
+  margin-top:
+    4px;
 
   color:
     var(--lima);
@@ -496,7 +596,8 @@
 }
 
 .unchanged-badge {
-  flex: 0 0 auto;
+  flex:
+    0 0 auto;
 
   padding:
     6px
@@ -514,11 +615,13 @@
     "DM Mono",
     monospace;
 
-  letter-spacing: .05em;
+  letter-spacing:
+    .05em;
 }
 
 .state-row {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     40px
@@ -526,9 +629,11 @@
     minmax(120px, 1fr)
     25px;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 12px;
+  gap:
+    12px;
 
   padding:
     12px
@@ -540,7 +645,8 @@
 }
 
 .state-row:last-child {
-  border-bottom: 0;
+  border-bottom:
+    0;
 }
 
 .state-row > span {
@@ -555,11 +661,13 @@
 }
 
 .state-row strong {
-  font-size: 14px;
+  font-size:
+    14px;
 }
 
 .state-row small {
-  color: #73756f;
+  color:
+    #73756f;
 
   font:
     400
@@ -572,7 +680,8 @@
   color:
     var(--lima);
 
-  font-weight: 400;
+  font-weight:
+    400;
 }
 
 
@@ -581,7 +690,8 @@
    ========================================================= */
 
 .evidence-grid {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     1fr
@@ -594,9 +704,11 @@
 
 .code-panel,
 .execution-panel {
-  min-width: 0;
+  min-width:
+    0;
 
-  padding: 22px;
+  padding:
+    22px;
 }
 
 .code-panel {
@@ -606,15 +718,19 @@
 }
 
 .panel-label {
-  display: block;
+  display:
+    block;
 
-  margin-bottom: 15px;
+  margin-bottom:
+    15px;
 }
 
 .lab-page pre {
-  margin: 0;
+  margin:
+    0;
 
-  overflow-x: auto;
+  overflow-x:
+    auto;
 }
 
 .lab-page code {
@@ -629,16 +745,22 @@
   color:
     var(--lima);
 
-  font-weight: 500;
+  font-weight:
+    500;
 }
 
 .execution-line {
-  display: flex;
+  display:
+    flex;
 
-  justify-content: space-between;
-  align-items: center;
+  justify-content:
+    space-between;
 
-  gap: 30px;
+  align-items:
+    center;
+
+  gap:
+    30px;
 
   padding:
     7px
@@ -656,15 +778,18 @@
 }
 
 .execution-line:last-child {
-  border-bottom: 0;
+  border-bottom:
+    0;
 }
 
 .execution-line span {
-  color: #73756f;
+  color:
+    #73756f;
 }
 
 .execution-line strong {
-  font-weight: 400;
+  font-weight:
+    400;
 }
 
 .execution-line .stable {
@@ -674,7 +799,7 @@
 
 
 /* =========================================================
-   ANIMAÇÃO DE ALTERAÇÃO
+   ANIMAÇÃO
    ========================================================= */
 
 .runtime-changing {
@@ -705,6 +830,157 @@
 
 
 /* =========================================================
+   VÍDEO
+   ========================================================= */
+
+.lab-video {
+  padding:
+    clamp(75px, 9vw, 135px)
+    4vw;
+
+  background:
+    var(--papel);
+
+  color:
+    var(--tinta);
+}
+
+.lab-video-intro {
+  display:
+    grid;
+
+  grid-template-columns:
+    1.5fr
+    .65fr;
+
+  align-items:
+    end;
+
+  gap:
+    5vw;
+
+  max-width:
+    1500px;
+
+  margin:
+    0
+    auto
+    clamp(45px, 5vw, 75px);
+}
+
+.lab-video-intro > div > span {
+  color:
+    #74766f;
+}
+
+.lab-video-intro h2 {
+  margin:
+    15px
+    0
+    0;
+
+  font-size:
+    clamp(
+      42px,
+      6vw,
+      86px
+    );
+
+  line-height:
+    .94;
+
+  letter-spacing:
+    -.065em;
+}
+
+.lab-video-intro p {
+  max-width:
+    500px;
+
+  margin:
+    0;
+
+  color:
+    #62645e;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+}
+
+.video-frame {
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  max-width:
+    1500px;
+
+  margin:
+    auto;
+
+  padding:
+    clamp(25px, 4vw, 60px);
+
+  background:
+    var(--tinta);
+}
+
+.video-frame video {
+  display:
+    block;
+
+  width:
+    min(100%, 430px);
+
+  height:
+    auto;
+
+  background:
+    var(--tinta);
+
+  border:
+    1px solid
+    #ffffff25;
+}
+
+.video-caption {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  max-width:
+    1500px;
+
+  margin:
+    15px
+    auto
+    0;
+
+  color:
+    #74766f;
+
+  font:
+    500
+    9px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .08em;
+}
+
+
+/* =========================================================
    CONCLUSÃO
    ========================================================= */
 
@@ -721,15 +997,19 @@
 }
 
 .lab-thesis > span {
-  display: block;
+  display:
+    block;
 
-  max-width: 1500px;
+  max-width:
+    1500px;
 
-  margin: auto;
+  margin:
+    auto;
 }
 
 .lab-thesis h2 {
-  max-width: 1500px;
+  max-width:
+    1500px;
 
   margin:
     clamp(30px, 4vw, 55px)
@@ -742,28 +1022,39 @@
       150px
     );
 
-  line-height: .84;
+  line-height:
+    .84;
 
-  letter-spacing: -.08em;
+  letter-spacing:
+    -.08em;
 }
 
 .thesis-bottom {
-  display: flex;
+  display:
+    flex;
 
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content:
+    space-between;
 
-  gap: 40px;
+  align-items:
+    flex-end;
 
-  max-width: 1500px;
+  gap:
+    40px;
 
-  margin: auto;
+  max-width:
+    1500px;
+
+  margin:
+    auto;
 }
 
 .thesis-bottom p {
-  max-width: 650px;
+  max-width:
+    650px;
 
-  margin: 0;
+  margin:
+    0;
 
   font-size:
     clamp(
@@ -772,11 +1063,13 @@
       27px
     );
 
-  line-height: 1.5;
+  line-height:
+    1.5;
 }
 
 .thesis-bottom a {
-  flex: 0 0 auto;
+  flex:
+    0 0 auto;
 
   padding:
     10px
@@ -792,7 +1085,112 @@
     "DM Mono",
     monospace;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   CONTEXTO
+   ========================================================= */
+
+.lab-context {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr
+    2fr;
+
+  gap:
+    6vw;
+
+  padding:
+    clamp(75px, 9vw, 140px)
+    4vw;
+
+  background:
+    var(--tinta);
+
+  color:
+    var(--papel);
+}
+
+.lab-context > span {
+  color:
+    #74766f;
+}
+
+.lab-context > div {
+  max-width:
+    850px;
+}
+
+.lab-context h2 {
+  margin:
+    0
+    0
+    35px;
+
+  font-size:
+    clamp(
+      40px,
+      5vw,
+      72px
+    );
+
+  line-height:
+    .98;
+
+  letter-spacing:
+    -.06em;
+}
+
+.lab-context p {
+  max-width:
+    760px;
+
+  color:
+    #a8aaa3;
+
+  font-size:
+    16px;
+
+  line-height:
+    1.85;
+}
+
+.context-links {
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    30px;
+
+  margin-top:
+    40px;
+}
+
+.context-links a {
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    var(--papel);
+
+  font:
+    500
+    10px
+    "DM Mono",
+    monospace;
+
+  text-transform:
+    uppercase;
 }
 
 
@@ -819,7 +1217,8 @@
   }
 
   .hero-bottom {
-    display: block;
+    display:
+      block;
   }
 
   .hero-bottom p {
@@ -835,11 +1234,13 @@
       80px;
   }
 
-  .experiment-intro {
+  .experiment-intro,
+  .lab-video-intro {
     grid-template-columns:
       1fr;
 
-    gap: 25px;
+    gap:
+      25px;
 
     margin-bottom:
       30px;
@@ -850,21 +1251,24 @@
     grid-template-columns:
       1fr;
 
-    gap: 14px;
+    gap:
+      14px;
 
     padding:
       18px;
   }
 
   .model-picker {
-    display: grid;
+    display:
+      grid;
 
     grid-template-columns:
       repeat(3, 1fr);
   }
 
   .model-button {
-    min-width: 0;
+    min-width:
+      0;
 
     padding-left:
       6px;
@@ -872,11 +1276,13 @@
     padding-right:
       6px;
 
-    text-align: center;
+    text-align:
+      center;
   }
 
   .change-message {
-    text-align: left;
+    text-align:
+      left;
   }
 
 
@@ -884,13 +1290,16 @@
     grid-template-columns:
       1fr;
 
-    min-height: auto;
+    min-height:
+      auto;
   }
 
   .runtime-card {
-    min-height: 180px;
+    min-height:
+      180px;
 
-    border-right: 0;
+    border-right:
+      0;
 
     border-bottom:
       1px solid
@@ -898,9 +1307,11 @@
   }
 
   .flow {
-    min-height: 55px;
+    min-height:
+      55px;
 
-    border-right: 0;
+    border-right:
+      0;
 
     border-bottom:
       1px solid
@@ -908,7 +1319,8 @@
   }
 
   .flow-line {
-    width: 50px;
+    width:
+      50px;
   }
 
 
@@ -920,7 +1332,8 @@
   }
 
   .state-row small {
-    display: none;
+    display:
+      none;
   }
 
 
@@ -930,11 +1343,38 @@
   }
 
   .code-panel {
-    border-right: 0;
+    border-right:
+      0;
 
     border-bottom:
       1px solid
       #ffffff30;
+  }
+
+
+  .lab-video {
+    padding:
+      75px
+      5vw;
+  }
+
+  .video-frame {
+    padding:
+      25px
+      10px;
+  }
+
+  .video-frame video {
+    width:
+      min(100%, 390px);
+  }
+
+  .video-caption {
+    flex-direction:
+      column;
+
+    gap:
+      5px;
   }
 
 
@@ -950,12 +1390,26 @@
   }
 
   .thesis-bottom {
-    display: block;
+    display:
+      block;
   }
 
   .thesis-bottom p {
     margin-bottom:
       35px;
+  }
+
+
+  .lab-context {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      35px;
+
+    padding:
+      80px
+      5vw;
   }
 
 }
@@ -968,7 +1422,8 @@
 @media (prefers-reduced-motion: reduce) {
 
   .runtime-changing {
-    animation: none;
+    animation:
+      none;
   }
 
 }
