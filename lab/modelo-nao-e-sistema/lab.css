@@ -1193,6 +1193,71 @@
     uppercase;
 }
 
+/* =========================================================
+   TABLET / INTERMEDIATE WIDTHS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .workbench-controls {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .model-picker {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .model-button {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .change-message {
+    text-align: left;
+  }
+
+  .experiment-stage {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .runtime-card {
+    min-height: 190px;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff30;
+  }
+
+  .flow {
+    min-height: 56px;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff30;
+  }
+
+  .flow-line {
+    width: 50px;
+  }
+
+  .state-row {
+    grid-template-columns:
+      40px
+      minmax(100px, 1fr)
+      minmax(100px, .8fr)
+      25px;
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .code-panel {
+    border-right: 0;
+    border-bottom: 1px solid #ffffff30;
+  }
+
+}
 
 /* =========================================================
    MOBILE
