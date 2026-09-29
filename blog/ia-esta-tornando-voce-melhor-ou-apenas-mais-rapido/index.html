@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charSet="utf-8"/>
+  <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
   <link rel="stylesheet" href="/style-v4.css"/>
-  <title>IA está tornando você melhor — ou apenas mais rápido? — Bruno César Angst</title>
-  <meta name="description" content="Uma reflexão sobre IA, agentes, automação e o novo papel do desenvolvedor: produzir mais código ou aumentar capacidade?"/>
-  <link rel="canonical" href="https://brunoangst.com.br/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/"/>
+
+  <title>
+    IA está tornando você melhor — ou apenas mais rápido? — Bruno César Angst
+  </title>
+
+  <meta
+    name="description"
+    content="Uma reflexão sobre IA, agentes, automação e o novo papel do desenvolvedor: produzir mais código ou aumentar capacidade?"
+  />
+
+  <link
+    rel="canonical"
+    href="https://brunoangst.com.br/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/"
+  />
+
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="pt_BR"/>
   <meta property="og:site_name" content="Bruno César Angst"/>
-  <meta property="og:title" content="IA está tornando você melhor — ou apenas mais rápido?"/>
-  <meta property="og:description" content="Produzir código está ficando mais fácil. Produzir bons sistemas continua difícil. Uma reflexão sobre IA, engenharia e capacidade."/>
-  <meta property="og:url" content="https://brunoangst.com.br/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/"/>
+
+  <meta
+    property="og:title"
+    content="IA está tornando você melhor — ou apenas mais rápido?"
+  />
+
+  <meta
+    property="og:description"
+    content="Produzir código está ficando mais fácil. Produzir bons sistemas continua difícil. Uma reflexão sobre IA, engenharia e capacidade."
+  />
+
+  <meta
+    property="og:url"
+    content="https://brunoangst.com.br/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/"
+  />
+
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content="IA está tornando você melhor — ou apenas mais rápido?"/>
-  <meta name="twitter:description" content="Produzir código está ficando mais fácil. Produzir bons sistemas continua difícil."/>
+
+  <meta
+    name="twitter:title"
+    content="IA está tornando você melhor — ou apenas mais rápido?"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Produzir código está ficando mais fácil. Produzir bons sistemas continua difícil."
+  />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,161 +73,1003 @@
     }
   }
   </script>
+
+  <style>
+    /* =====================================================
+       LAB CARD DENTRO DO ARTIGO
+       ===================================================== */
+
+    .artigo-lab {
+      position: relative;
+
+      margin:
+        clamp(55px, 7vw, 90px)
+        0;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        var(--tinta);
+
+      background:
+        var(--tinta);
+
+      color:
+        var(--papel);
+    }
+
+    .artigo-lab-top {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 20px;
+
+      padding:
+        16px
+        20px;
+
+      border-bottom:
+        1px solid
+        #ffffff30;
+
+      font:
+        500
+        9px
+        "DM Mono",
+        monospace;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .artigo-lab-top span:first-child {
+      color:
+        var(--lima);
+    }
+
+    .artigo-lab-top span:last-child {
+      color:
+        #81837c;
+    }
+
+    .artigo-lab-body {
+      padding:
+        clamp(30px, 5vw, 55px);
+    }
+
+    .artigo-lab-body h3 {
+      margin:
+        0
+        0
+        25px;
+
+      font-size:
+        clamp(
+          42px,
+          7vw,
+          80px
+        );
+
+      line-height:
+        .9;
+
+      letter-spacing:
+        -.07em;
+    }
+
+    .artigo-lab-body h3 span {
+      color:
+        var(--lima);
+    }
+
+    .artigo-lab-body > p {
+      max-width:
+        620px;
+
+      margin:
+        0
+        0
+        32px;
+
+      color:
+        #b7b9b2;
+
+      font-size:
+        15px;
+
+      line-height:
+        1.75;
+    }
+
+    .artigo-lab-demo {
+      display: grid;
+
+      grid-template-columns:
+        minmax(110px, .7fr)
+        55px
+        minmax(190px, 1.3fr);
+
+      align-items:
+        stretch;
+
+      margin:
+        35px
+        0;
+
+      border:
+        1px solid
+        #ffffff30;
+    }
+
+    .artigo-lab-runtime,
+    .artigo-lab-state {
+      padding:
+        22px;
+    }
+
+    .artigo-lab-runtime {
+      display: flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
+    }
+
+    .artigo-lab-runtime small,
+    .artigo-lab-state small {
+      color:
+        #74766f;
+
+      font:
+        500
+        8px
+        "DM Mono",
+        monospace;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .artigo-lab-runtime strong {
+      display:
+        block;
+
+      margin-top:
+        8px;
+
+      font-size:
+        clamp(
+          28px,
+          4vw,
+          45px
+        );
+
+      letter-spacing:
+        -.05em;
+    }
+
+    .artigo-lab-arrow {
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border-left:
+        1px solid
+        #ffffff25;
+
+      border-right:
+        1px solid
+        #ffffff25;
+
+      color:
+        var(--lima);
+
+      font-size:
+        22px;
+    }
+
+    .artigo-lab-state {
+      display:
+        grid;
+
+      gap:
+        10px;
+    }
+
+    .artigo-lab-state div {
+      display:
+        grid;
+
+      grid-template-columns:
+        30px
+        1fr
+        auto;
+
+      align-items:
+        center;
+
+      gap:
+        12px;
+
+      padding:
+        8px
+        0;
+
+      border-bottom:
+        1px solid
+        #ffffff17;
+    }
+
+    .artigo-lab-state div:last-child {
+      border-bottom:
+        0;
+    }
+
+    .artigo-lab-state span {
+      color:
+        var(--lima);
+
+      font:
+        500
+        9px
+        "DM Mono",
+        monospace;
+    }
+
+    .artigo-lab-state strong {
+      font-size:
+        12px;
+    }
+
+    .artigo-lab-state b {
+      color:
+        var(--lima);
+
+      font-weight:
+        400;
+    }
+
+    .artigo-lab-action {
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      gap:
+        30px;
+
+      padding:
+        14px
+        18px;
+
+      background:
+        var(--lima);
+
+      color:
+        var(--tinta);
+
+      font:
+        500
+        10px
+        "DM Mono",
+        monospace;
+
+      letter-spacing:
+        .04em;
+
+      text-transform:
+        uppercase;
+
+      transition:
+        gap
+        .2s
+        ease;
+    }
+
+    .artigo-lab-action:hover {
+      gap:
+        40px;
+    }
+
+
+    @media (max-width: 760px) {
+
+      .artigo-lab-top {
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+        gap:
+          8px;
+      }
+
+      .artigo-lab-demo {
+        grid-template-columns:
+          1fr;
+      }
+
+      .artigo-lab-arrow {
+        min-height:
+          45px;
+
+        border-left:
+          0;
+
+        border-right:
+          0;
+
+        border-top:
+          1px solid
+          #ffffff25;
+
+        border-bottom:
+          1px solid
+          #ffffff25;
+
+        transform:
+          rotate(90deg);
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .artigo-lab-action {
+        transition:
+          none;
+      }
+
+    }
+  </style>
 </head>
+
 <body>
-  <div hidden=""><!--$--><!--/$--></div>
+
+  <div hidden="">
+    <!--$-->
+    <!--/$-->
+  </div>
+
+
   <header>
-    <a class="marca" href="/"><span>BC</span><strong>ANGST</strong></a>
+
+    <a
+      class="marca"
+      href="/"
+    >
+      <span>BC</span>
+      <strong>ANGST</strong>
+    </a>
+
     <nav class="">
-      <a href="/sobre/">Sobre</a>
-      <a href="/agora/">Agora</a>
-      <a href="/principios/">Princípios</a>
-      <a href="/blog/">Blog</a>
-      <a href="/contato/">Contato</a>
+
+      <a href="/sobre/">
+        Sobre
+      </a>
+
+      <a href="/agora/">
+        Agora
+      </a>
+
+      <a href="/principios/">
+        Princípios
+      </a>
+
+      <a href="/blog/">
+        Blog
+      </a>
+
+      <a href="/contato/">
+        Contato
+      </a>
+
     </nav>
-    <div class="local"><i></i> Arroio do Sal · RS</div>
-    <button class="menu" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+
+    <div class="local">
+      <i></i>
+      Arroio do Sal · RS
+    </div>
+
+    <button
+      class="menu"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
   </header>
 
+
   <main>
+
     <article class="artigo-inteiro">
-      <a class="voltar" href="/blog/">← Voltar ao blog</a>
+
+      <a
+        class="voltar"
+        href="/blog/"
+      >
+        ← Voltar ao blog
+      </a>
+
+
       <header>
-        <span>TECNOLOGIA · 29 SET 2026 · 7 MIN</span>
-        <h1>IA está tornando você melhor — ou apenas mais rápido?</h1>
-        <p>Quanto mais eu uso inteligência artificial no desenvolvimento de software, menos me impressiona o fato de ela conseguir escrever código.</p>
+
+        <span>
+          TECNOLOGIA · 29 SET 2026 · 7 MIN
+        </span>
+
+        <h1>
+          IA está tornando você melhor — ou apenas mais rápido?
+        </h1>
+
+        <p>
+          Quanto mais eu uso inteligência artificial no desenvolvimento de software,
+          menos me impressiona o fato de ela conseguir escrever código.
+        </p>
+
       </header>
 
+
       <div class="corpo-artigo">
-        <p class="abertura">A pergunta que começou a me interessar é outra: o que acontece quando paramos de usar IA apenas para gerar respostas e começamos a construir sistemas em torno dela?</p>
 
-        <p>Nos últimos meses tenho experimentado desenvolvimento assistido por IA, agentes, automações e formas de organizar conhecimento. E uma coisa começou a ficar clara para mim: <strong>o modelo é apenas uma peça.</strong></p>
+        <p class="abertura">
+          A pergunta que começou a me interessar é outra:
+          o que acontece quando paramos de usar IA apenas para gerar respostas
+          e começamos a construir sistemas em torno dela?
+        </p>
 
-        <p>Claude, GPT, Codex ou qualquer outro modelo pode ser excelente, mas sozinho ele não constitui um sistema de trabalho. O resultado real aparece quando combinamos modelo, contexto, ferramentas, memória, automação, testes e feedback.</p>
+        <p>
+          Nos últimos meses tenho experimentado desenvolvimento assistido por IA,
+          agentes, automações e formas de organizar conhecimento.
+          E uma coisa começou a ficar clara para mim:
+          <strong>o modelo é apenas uma peça.</strong>
+        </p>
 
-        <blockquote>Produzir código está ficando mais fácil. Produzir bons sistemas continua difícil.</blockquote>
+        <p>
+          Claude, GPT, Codex ou qualquer outro modelo pode ser excelente,
+          mas sozinho ele não constitui um sistema de trabalho.
+          O resultado real aparece quando combinamos modelo, contexto,
+          ferramentas, memória, automação, testes e feedback.
+        </p>
 
-        <h2>O código está ficando mais barato.</h2>
 
-        <p>Durante muito tempo, uma parte significativa do custo de construir software estava em transformar uma ideia em código. Esse custo está caindo rapidamente.</p>
+        <!-- =================================================
+             LAB #001
+             ================================================= -->
 
-        <p>Uma funcionalidade que antes exigia horas de implementação pode ser produzida em minutos. Um protótipo que talvez demorasse semanas pode surgir em poucos dias.</p>
+        <aside class="artigo-lab">
 
-        <p>Isso é poderoso. Mas também desloca o valor.</p>
+          <div class="artigo-lab-top">
 
-        <p>Se escrever código fica mais barato, escrever código deixa de ser o principal diferencial. O valor sobe uma camada: entender corretamente o problema, decidir o que vale a pena construir, escolher entre soluções, perceber riscos, testar, corrigir, manter e assumir responsabilidade pelo resultado.</p>
+            <span>
+              LAB #001 · EXPERIMENTO INTERATIVO
+            </span>
 
-        <h2>Produzir mais não significa produzir melhor.</h2>
+            <span>
+              MODELO ≠ SISTEMA
+            </span>
 
-        <p>A IA pode gerar milhares de linhas de código rapidamente. Isso não significa necessariamente produtividade.</p>
+          </div>
 
-        <p>Também podemos estar produzindo bugs, complexidade e dívida técnica em uma velocidade muito maior.</p>
 
-        <p><strong>Output não é outcome.</strong> Quantidade de código não é resultado. Velocidade de implementação não é qualidade.</p>
+          <div class="artigo-lab-body">
 
-        <p>Um software funcionando em uma demonstração não significa que esteja pronto para sobreviver ao mundo real. Quando entram usuários, dados, segurança, concorrência, integrações, custos, manutenção e mudanças de requisito, aparecem problemas que normalmente não estavam no primeiro prompt.</p>
+            <h3>
+              Esta ideia pode
+              <br>
+              ser <span>testada.</span>
+            </h3>
 
-        <h2>A IA reduz o custo de explorar possibilidades.</h2>
+            <p>
+              Troque GPT por Claude ou por um modelo local e observe
+              o que acontece quando conhecimento, decisões e regras
+              não vivem dentro da sessão.
+            </p>
 
-        <p>Um desenvolvedor experiente não é valioso apenas porque escreve código mais rápido. Ele é valioso porque já viu muitos problemas.</p>
 
-        <p>Diante de vinte caminhos possíveis, a experiência permite eliminar rapidamente vários deles. Um profissional menos experiente precisa testar mais alternativas até descobrir quais funcionam.</p>
+            <div class="artigo-lab-demo">
 
-        <p>A IA pode acelerar esse processo. Pode apresentar caminhos que levaríamos anos para conhecer, comparar arquiteturas, mostrar padrões, questionar decisões e ajudar a diagnosticar falhas.</p>
+              <div class="artigo-lab-runtime">
 
-        <p>Mas existe uma diferença fundamental entre <strong>conhecer alternativas</strong> e <strong>saber escolher entre elas</strong>.</p>
+                <small>
+                  RUNTIME
+                </small>
 
-        <p>Essa segunda capacidade ainda precisa ser construída com estudo, experimentação, erro e feedback.</p>
+                <strong>
+                  GPT
+                </strong>
 
-        <h2>O que estou tentando construir agora.</h2>
+              </div>
 
-        <p>Essa percepção começou a mudar minha própria forma de usar IA.</p>
 
-        <p>Em vez de pensar apenas “como faço a IA executar esta tarefa?”, comecei a pensar: <strong>como faço o aprendizado desta tarefa permanecer no sistema?</strong></p>
+              <div class="artigo-lab-arrow">
+                →
+              </div>
 
-        <p>Se eu resolvo um problema difícil com ajuda da IA e aquela experiência morre quando a conversa termina, na próxima vez começo quase do zero.</p>
 
-        <p>Mas se eu extraio dali o que descobrimos, qual decisão tomamos, por que tomamos essa decisão, o que deu errado, o que funcionou e em quais situações aquele procedimento deve ser usado, a interação deixa de ser apenas uma conversa.</p>
+              <div class="artigo-lab-state">
 
-        <p>Ela começa a virar infraestrutura.</p>
+                <small>
+                  EXTERNAL STATE · PERSISTENTE
+                </small>
 
-        <blockquote>Experiência → conhecimento → processo → automação → capacidade.</blockquote>
+                <div>
+                  <span>10</span>
+                  <strong>KNOWLEDGE</strong>
+                  <b>✓</b>
+                </div>
 
-        <p>A primeira vez exige esforço. A segunda deveria exigir menos. Na terceira, talvez parte da tarefa já esteja automatizada. O sistema começa a melhorar com o próprio uso.</p>
+                <div>
+                  <span>20</span>
+                  <strong>DECISIONS</strong>
+                  <b>✓</b>
+                </div>
 
-        <h2>O verdadeiro potencial dos agentes.</h2>
+                <div>
+                  <span>30</span>
+                  <strong>SYSTEM</strong>
+                  <b>✓</b>
+                </div>
 
-        <p>É por isso que agentes me interessam mais do que simplesmente ter um chatbot melhor.</p>
+              </div>
 
-        <p>Não porque sejam mágicos, mas porque permitem conectar raciocínio a ferramentas e processos. Um modelo pode analisar uma situação, uma ferramenta pode consultar informações, outra pode executar uma ação, o resultado volta ao modelo e o sistema pode verificar se funcionou antes de decidir o próximo passo.</p>
+            </div>
 
-        <p>Isso transforma a IA de algo que apenas responde para algo que participa de um workflow.</p>
 
-        <p>Mas quanto mais autonomia damos ao sistema, mais importantes ficam permissões, limites, testes, observabilidade, segurança e responsabilidade.</p>
+            <a
+              class="artigo-lab-action"
+              href="/lab/modelo-nao-e-sistema/"
+            >
+              Executar experimento
+              <span>→</span>
+            </a>
 
-        <p>Um agente com ferramentas poderosas e regras ruins apenas consegue cometer erros mais rapidamente.</p>
+          </div>
 
-        <h2>Talvez este seja o verdadeiro diferencial.</h2>
+        </aside>
 
-        <p>Durante algum tempo, saber “usar IA” parecia diferencial. Não acredito que continuará assim.</p>
 
-        <p>Usar IA tende a virar habilidade básica, assim como pesquisar na internet, usar uma IDE ou trabalhar com Git.</p>
+        <blockquote>
+          Produzir código está ficando mais fácil.
+          Produzir bons sistemas continua difícil.
+        </blockquote>
 
-        <p>O diferencial provavelmente estará em saber construir bons sistemas de trabalho em torno da IA: sistemas que preservam contexto, acumulam conhecimento, transformam descobertas em procedimentos, automatizam tarefas repetitivas, conseguem trocar de modelo sem perder tudo e possuem mecanismos de avaliação.</p>
 
-        <p>E, principalmente, sistemas nos quais o humano continua entendendo por que determinada decisão está sendo tomada.</p>
+        <h2>
+          O código está ficando mais barato.
+        </h2>
 
-        <blockquote>Existe uma diferença enorme entre usar IA para produzir mais e usar IA para aumentar sua capacidade.</blockquote>
+        <p>
+          Durante muito tempo, uma parte significativa do custo de construir
+          software estava em transformar uma ideia em código.
+          Esse custo está caindo rapidamente.
+        </p>
 
-        <p>É essa segunda possibilidade que estou tentando explorar.</p>
+        <p>
+          Uma funcionalidade que antes exigia horas de implementação
+          pode ser produzida em minutos.
+          Um protótipo que talvez demorasse semanas pode surgir em poucos dias.
+        </p>
 
-        <p>E talvez seja também uma das perguntas mais importantes para quem trabalha com tecnologia agora:</p>
+        <p>
+          Isso é poderoso.
+          Mas também desloca o valor.
+        </p>
 
-        <p><strong>A IA está tornando você um profissional melhor — ou apenas um profissional mais rápido?</strong></p>
+        <p>
+          Se escrever código fica mais barato,
+          escrever código deixa de ser o principal diferencial.
+          O valor sobe uma camada:
+          entender corretamente o problema,
+          decidir o que vale a pena construir,
+          escolher entre soluções,
+          perceber riscos,
+          testar,
+          corrigir,
+          manter e assumir responsabilidade pelo resultado.
+        </p>
+
+
+        <h2>
+          Produzir mais não significa produzir melhor.
+        </h2>
+
+        <p>
+          A IA pode gerar milhares de linhas de código rapidamente.
+          Isso não significa necessariamente produtividade.
+        </p>
+
+        <p>
+          Também podemos estar produzindo bugs,
+          complexidade e dívida técnica em uma velocidade muito maior.
+        </p>
+
+        <p>
+          <strong>Output não é outcome.</strong>
+          Quantidade de código não é resultado.
+          Velocidade de implementação não é qualidade.
+        </p>
+
+        <p>
+          Um software funcionando em uma demonstração
+          não significa que esteja pronto para sobreviver ao mundo real.
+          Quando entram usuários, dados, segurança, concorrência,
+          integrações, custos, manutenção e mudanças de requisito,
+          aparecem problemas que normalmente não estavam no primeiro prompt.
+        </p>
+
+
+        <h2>
+          A IA reduz o custo de explorar possibilidades.
+        </h2>
+
+        <p>
+          Um desenvolvedor experiente não é valioso apenas porque
+          escreve código mais rápido.
+          Ele é valioso porque já viu muitos problemas.
+        </p>
+
+        <p>
+          Diante de vinte caminhos possíveis,
+          a experiência permite eliminar rapidamente vários deles.
+          Um profissional menos experiente precisa testar mais alternativas
+          até descobrir quais funcionam.
+        </p>
+
+        <p>
+          A IA pode acelerar esse processo.
+          Pode apresentar caminhos que levaríamos anos para conhecer,
+          comparar arquiteturas,
+          mostrar padrões,
+          questionar decisões
+          e ajudar a diagnosticar falhas.
+        </p>
+
+        <p>
+          Mas existe uma diferença fundamental entre
+          <strong>conhecer alternativas</strong>
+          e
+          <strong>saber escolher entre elas</strong>.
+        </p>
+
+        <p>
+          Essa segunda capacidade ainda precisa ser construída
+          com estudo, experimentação, erro e feedback.
+        </p>
+
+
+        <h2>
+          O que estou tentando construir agora.
+        </h2>
+
+        <p>
+          Essa percepção começou a mudar minha própria forma de usar IA.
+        </p>
+
+        <p>
+          Em vez de pensar apenas
+          “como faço a IA executar esta tarefa?”,
+          comecei a pensar:
+          <strong>
+            como faço o aprendizado desta tarefa permanecer no sistema?
+          </strong>
+        </p>
+
+        <p>
+          Se eu resolvo um problema difícil com ajuda da IA
+          e aquela experiência morre quando a conversa termina,
+          na próxima vez começo quase do zero.
+        </p>
+
+        <p>
+          Mas se eu extraio dali o que descobrimos,
+          qual decisão tomamos,
+          por que tomamos essa decisão,
+          o que deu errado,
+          o que funcionou
+          e em quais situações aquele procedimento deve ser usado,
+          a interação deixa de ser apenas uma conversa.
+        </p>
+
+        <p>
+          Ela começa a virar infraestrutura.
+        </p>
+
+        <blockquote>
+          Experiência → conhecimento → processo → automação → capacidade.
+        </blockquote>
+
+        <p>
+          A primeira vez exige esforço.
+          A segunda deveria exigir menos.
+          Na terceira, talvez parte da tarefa já esteja automatizada.
+          O sistema começa a melhorar com o próprio uso.
+        </p>
+
+
+        <h2>
+          O verdadeiro potencial dos agentes.
+        </h2>
+
+        <p>
+          É por isso que agentes me interessam mais
+          do que simplesmente ter um chatbot melhor.
+        </p>
+
+        <p>
+          Não porque sejam mágicos,
+          mas porque permitem conectar raciocínio a ferramentas e processos.
+          Um modelo pode analisar uma situação,
+          uma ferramenta pode consultar informações,
+          outra pode executar uma ação,
+          o resultado volta ao modelo
+          e o sistema pode verificar se funcionou
+          antes de decidir o próximo passo.
+        </p>
+
+        <p>
+          Isso transforma a IA de algo que apenas responde
+          para algo que participa de um workflow.
+        </p>
+
+        <p>
+          Mas quanto mais autonomia damos ao sistema,
+          mais importantes ficam permissões,
+          limites,
+          testes,
+          observabilidade,
+          segurança e responsabilidade.
+        </p>
+
+        <p>
+          Um agente com ferramentas poderosas e regras ruins
+          apenas consegue cometer erros mais rapidamente.
+        </p>
+
+
+        <h2>
+          Talvez este seja o verdadeiro diferencial.
+        </h2>
+
+        <p>
+          Durante algum tempo,
+          saber “usar IA” parecia diferencial.
+          Não acredito que continuará assim.
+        </p>
+
+        <p>
+          Usar IA tende a virar habilidade básica,
+          assim como pesquisar na internet,
+          usar uma IDE
+          ou trabalhar com Git.
+        </p>
+
+        <p>
+          O diferencial provavelmente estará em saber construir
+          bons sistemas de trabalho em torno da IA:
+          sistemas que preservam contexto,
+          acumulam conhecimento,
+          transformam descobertas em procedimentos,
+          automatizam tarefas repetitivas,
+          conseguem trocar de modelo sem perder tudo
+          e possuem mecanismos de avaliação.
+        </p>
+
+        <p>
+          E, principalmente,
+          sistemas nos quais o humano continua entendendo
+          por que determinada decisão está sendo tomada.
+        </p>
+
+        <blockquote>
+          Existe uma diferença enorme entre usar IA para produzir mais
+          e usar IA para aumentar sua capacidade.
+        </blockquote>
+
+        <p>
+          É essa segunda possibilidade que estou tentando explorar.
+        </p>
+
+        <p>
+          E talvez seja também uma das perguntas mais importantes
+          para quem trabalha com tecnologia agora:
+        </p>
+
+        <p>
+          <strong>
+            A IA está tornando você um profissional melhor
+            — ou apenas um profissional mais rápido?
+          </strong>
+        </p>
+
       </div>
+
     </article>
 
+
     <section class="apoio">
-      <span>[ APOIE ESTE ESPAÇO ]</span>
-      <h2>Se este texto lhe acrescentou algo, ajude o próximo a existir.</h2>
-      <p>Todo conteúdo continuará aberto. Seu apoio mantém este caderno independente e em movimento.</p>
+
+      <span>
+        [ APOIE ESTE ESPAÇO ]
+      </span>
+
+      <h2>
+        Se este texto lhe acrescentou algo,
+        ajude o próximo a existir.
+      </h2>
+
+      <p>
+        Todo conteúdo continuará aberto.
+        Seu apoio mantém este caderno independente e em movimento.
+      </p>
+
       <div class="apoio-opcoes">
-        <a href="https://mpago.li/1zeMPR8" target="_blank" rel="noopener noreferrer"><small>Um café</small><strong>R$ 7</strong><b>↗</b></a>
-        <a href="https://mpago.li/1EDxNHm" target="_blank" rel="noopener noreferrer"><small>Apoiar o próximo texto</small><strong>R$ 15</strong><b>↗</b></a>
+
+        <a
+          href="https://mpago.li/1zeMPR8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <small>
+            Um café
+          </small>
+
+          <strong>
+            R$ 7
+          </strong>
+
+          <b>
+            ↗
+          </b>
+        </a>
+
+        <a
+          href="https://mpago.li/1EDxNHm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <small>
+            Apoiar o próximo texto
+          </small>
+
+          <strong>
+            R$ 15
+          </strong>
+
+          <b>
+            ↗
+          </b>
+        </a>
+
       </div>
+
     </section>
+
 
     <section class="comentarios">
+
       <div class="comentarios-cabecalho">
-        <span>[ CONVERSA ABERTA ]</span>
-        <h2>Continue o pensamento.</h2>
-        <p>Discorde, complemente, pergunte. Nome e comentário serão públicos; o e-mail é usado pelo Disqus para identificação e notificações.</p>
+
+        <span>
+          [ CONVERSA ABERTA ]
+        </span>
+
+        <h2>
+          Continue o pensamento.
+        </h2>
+
+        <p>
+          Discorde, complemente, pergunte.
+          Nome e comentário serão públicos;
+          o e-mail é usado pelo Disqus para identificação e notificações.
+        </p>
+
       </div>
+
       <div id="disqus_thread"></div>
-      <noscript>Ative o JavaScript para visualizar os comentários.</noscript>
+
+      <noscript>
+        Ative o JavaScript para visualizar os comentários.
+      </noscript>
+
     </section>
+
   </main>
 
+
   <script>
-    var disqus_config=function(){
-      this.page.url="https://brunoangst.com.br/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/";
-      this.page.identifier="ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido";
+    var disqus_config = function () {
+      this.page.url =
+        "https://brunoangst.com.br/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/";
+
+      this.page.identifier =
+        "ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido";
     };
-    (function(){
-      var d=document,s=d.createElement("script");
-      s.src="https://bruno-cesar-angst.disqus.com/embed.js";
-      s.setAttribute("data-timestamp",+new Date());
-      (d.head||d.body).appendChild(s);
+
+    (function () {
+      var d = document;
+      var s = d.createElement("script");
+
+      s.src =
+        "https://bruno-cesar-angst.disqus.com/embed.js";
+
+      s.setAttribute(
+        "data-timestamp",
+        +new Date()
+      );
+
+      (d.head || d.body).appendChild(s);
     })();
   </script>
 
+
   <footer>
-    <div><span>Bruno César Angst</span><h2>Menos ruído.<br/>Mais <em>sentido.</em></h2></div>
-    <div class="rodape-fim">
-      <p>Arroio do Sal, Rio Grande do Sul<br/>Brasil</p>
-      <div class="links-rodape"><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="/contato/">Contato</a></div>
+
+    <div>
+
+      <span>
+        Bruno César Angst
+      </span>
+
+      <h2>
+        Menos ruído.
+        <br>
+        Mais <em>sentido.</em>
+      </h2>
+
     </div>
-    <small>© 2026 Bruno César Angst</small>
+
+
+    <div class="rodape-fim">
+
+      <p>
+        Arroio do Sal, Rio Grande do Sul
+        <br>
+        Brasil
+      </p>
+
+      <div class="links-rodape">
+
+        <a href="/sobre/">
+          Sobre
+        </a>
+
+        <a href="/blog/">
+          Blog
+        </a>
+
+        <a href="/contato/">
+          Contato
+        </a>
+
+      </div>
+
+    </div>
+
+    <small>
+      © 2026 Bruno César Angst
+    </small>
+
   </footer>
+
 </body>
 </html>

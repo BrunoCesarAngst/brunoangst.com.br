@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Lab — Bruno César Angst</title>
+
+  <meta
+    name="description"
+    content="Experimentos visuais e técnicos sobre inteligência artificial, software, sistemas e pensamento aplicado."
+  >
+
+  <link
+    rel="canonical"
+    href="https://brunoangst.com.br/lab/"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bruno César Angst">
+
+  <meta
+    property="og:title"
+    content="Lab — Bruno César Angst"
+  >
+
+  <meta
+    property="og:description"
+    content="Ideias transformadas em experimentos executáveis."
+  >
+
+  <meta
+    property="og:url"
+    content="https://brunoangst.com.br/lab/"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/style-v4.css"
+  >
+
+  <style>
+    .lab-index {
+      background: var(--tinta);
+      color: var(--papel);
+      min-height: 100vh;
+    }
+
+    .lab-index main {
+      overflow: hidden;
+    }
+
+    .lab-index-hero {
+      padding:
+        clamp(70px, 8vw, 120px)
+        4vw
+        clamp(70px, 8vw, 120px);
+
+      border-bottom:
+        1px solid
+        #ffffff25;
+    }
+
+    .lab-index-label,
+    .lab-card-number,
+    .lab-card-meta,
+    .lab-index-about span {
+      font:
+        500
+        9px
+        "DM Mono",
+        monospace;
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
+    }
+
+    .lab-index-label {
+      color: var(--lima);
+    }
+
+    .lab-index-hero h1 {
+      margin:
+        clamp(30px, 4vw, 60px)
+        0;
+
+      max-width: 1400px;
+
+      font-size:
+        clamp(
+          72px,
+          12vw,
+          180px
+        );
+
+      line-height: .8;
+
+      letter-spacing: -.09em;
+    }
+
+    .lab-index-hero h1 span {
+      color: var(--lima);
+    }
+
+    .lab-index-intro {
+      display: grid;
+
+      grid-template-columns:
+        1.5fr
+        .65fr;
+
+      gap: 6vw;
+
+      align-items: end;
+
+      max-width: 1500px;
+
+      margin-left: auto;
+    }
+
+    .lab-index-intro p {
+      margin: 0;
+
+      max-width: 720px;
+
+      color: #c4c5bf;
+
+      font-size:
+        clamp(
+          18px,
+          1.8vw,
+          27px
+        );
+
+      line-height: 1.55;
+    }
+
+    .lab-index-intro small {
+      color: #777;
+
+      font:
+        400
+        10px / 1.7
+        "DM Mono",
+        monospace;
+    }
+
+
+    /* =====================================================
+       EXPERIMENTOS
+       ===================================================== */
+
+    .labs {
+      padding:
+        clamp(70px, 8vw, 120px)
+        4vw;
+
+      max-width: 1600px;
+
+      margin: auto;
+    }
+
+    .labs-heading {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+
+      margin-bottom:
+        clamp(35px, 4vw, 60px);
+    }
+
+    .labs-heading span {
+      font:
+        500
+        9px
+        "DM Mono",
+        monospace;
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
+
+      color: #777;
+    }
+
+    .labs-heading small {
+      font:
+        400
+        9px
+        "DM Mono",
+        monospace;
+
+      color: #666;
+    }
+
+
+    /* =====================================================
+       CARD
+       ===================================================== */
+
+    .lab-card {
+      display: grid;
+
+      grid-template-columns:
+        110px
+        1fr
+        auto;
+
+      gap: 30px;
+
+      align-items: center;
+
+      position: relative;
+
+      padding:
+        clamp(30px, 4vw, 60px)
+        0;
+
+      border-top:
+        1px solid
+        #ffffff2e;
+
+      color: inherit;
+
+      overflow: hidden;
+
+      transition:
+        padding .25s ease,
+        color .25s ease;
+    }
+
+    .lab-card:last-child {
+      border-bottom:
+        1px solid
+        #ffffff2e;
+    }
+
+    .lab-card::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: 0;
+
+      background:
+        var(--lima);
+
+      transform:
+        translateY(101%);
+
+      transition:
+        transform .28s ease;
+    }
+
+    .lab-card:hover::before,
+    .lab-card:focus-visible::before {
+      transform:
+        translateY(0);
+    }
+
+    .lab-card:hover,
+    .lab-card:focus-visible {
+      color:
+        var(--tinta);
+
+      padding-left:
+        2vw;
+
+      padding-right:
+        2vw;
+    }
+
+    .lab-card > * {
+      position: relative;
+
+      z-index: 1;
+    }
+
+    .lab-card-number {
+      color:
+        var(--lima);
+    }
+
+    .lab-card:hover .lab-card-number,
+    .lab-card:focus-visible .lab-card-number {
+      color:
+        var(--tinta);
+    }
+
+    .lab-card-meta {
+      display: block;
+
+      margin-bottom:
+        14px;
+
+      color: #777;
+    }
+
+    .lab-card:hover .lab-card-meta,
+    .lab-card:focus-visible .lab-card-meta {
+      color:
+        #333;
+    }
+
+    .lab-card h2 {
+      margin:
+        0
+        0
+        18px;
+
+      max-width: 1050px;
+
+      font-size:
+        clamp(
+          38px,
+          5.5vw,
+          82px
+        );
+
+      line-height: .95;
+
+      letter-spacing: -.065em;
+    }
+
+    .lab-card p {
+      max-width: 750px;
+
+      margin: 0;
+
+      color: #979992;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+    }
+
+    .lab-card:hover p,
+    .lab-card:focus-visible p {
+      color:
+        #30322e;
+    }
+
+    .lab-card-arrow {
+      font-size:
+        clamp(
+          28px,
+          3vw,
+          45px
+        );
+    }
+
+
+    /* =====================================================
+       SOBRE
+       ===================================================== */
+
+    .lab-index-about {
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        2fr;
+
+      gap: 6vw;
+
+      padding:
+        clamp(75px, 9vw, 140px)
+        4vw;
+
+      background:
+        var(--papel);
+
+      color:
+        var(--tinta);
+    }
+
+    .lab-index-about > div {
+      max-width: 850px;
+    }
+
+    .lab-index-about h2 {
+      margin:
+        0
+        0
+        35px;
+
+      font-size:
+        clamp(
+          38px,
+          5vw,
+          72px
+        );
+
+      line-height: 1;
+
+      letter-spacing: -.06em;
+    }
+
+    .lab-index-about p {
+      max-width: 760px;
+
+      font-size: 17px;
+
+      line-height: 1.85;
+    }
+
+    .lab-index-about strong {
+      font-weight: 700;
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (max-width: 760px) {
+
+      .lab-index-hero {
+        padding:
+          65px
+          5vw
+          70px;
+      }
+
+      .lab-index-hero h1 {
+        margin:
+          40px
+          0;
+
+        font-size:
+          21vw;
+      }
+
+      .lab-index-intro {
+        grid-template-columns:
+          1fr;
+
+        gap: 30px;
+
+        margin-left: 0;
+      }
+
+      .labs {
+        padding:
+          70px
+          5vw;
+      }
+
+      .labs-heading {
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+        gap: 10px;
+      }
+
+      .lab-card {
+        grid-template-columns:
+          45px
+          1fr
+          30px;
+
+        gap: 12px;
+
+        padding:
+          40px
+          0;
+      }
+
+      .lab-card:hover,
+      .lab-card:focus-visible {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .lab-card::before {
+        display: none;
+      }
+
+      .lab-card h2 {
+        font-size:
+          clamp(
+            34px,
+            11vw,
+            56px
+          );
+      }
+
+      .lab-card p {
+        font-size:
+          14px;
+      }
+
+      .lab-index-about {
+        grid-template-columns:
+          1fr;
+
+        gap: 35px;
+
+        padding:
+          80px
+          5vw;
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .lab-card,
+      .lab-card::before {
+        transition: none;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="lab-index">
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="lab-index-hero">
+
+      <div class="lab-index-label">
+        BRUNO ANGST · LAB
+      </div>
+
+      <h1>
+        IDEIAS
+        <br>
+        EM <span>EXECUÇÃO.</span>
+      </h1>
+
+      <div class="lab-index-intro">
+
+        <p>
+          Alguns conceitos ficam mais claros quando deixam
+          de ser apenas texto. Este é um espaço para transformar
+          ideias em pequenos experimentos visuais, interativos
+          e executáveis.
+        </p>
+
+        <small>
+          SOFTWARE · IA · SISTEMAS · AUTOMAÇÃO
+          <br>
+          EXPERIMENTOS EM EVOLUÇÃO
+        </small>
+
+      </div>
+
+    </section>
+
+
+    <!-- LABS -->
+
+    <section class="labs">
+
+      <div class="labs-heading">
+
+        <span>
+          [ EXPERIMENTOS ]
+        </span>
+
+        <small>
+          001 — ATIVO
+        </small>
+
+      </div>
+
+
+      <!-- LAB #001 -->
+
+      <a
+        class="lab-card"
+        href="/lab/modelo-nao-e-sistema/"
+      >
+
+        <span class="lab-card-number">
+          001
+        </span>
+
+        <div>
+
+          <span class="lab-card-meta">
+            INTELIGÊNCIA ARTIFICIAL · INTERATIVO
+          </span>
+
+          <h2>
+            Modelo ≠ Sistema
+          </h2>
+
+          <p>
+            Troque o modelo de IA e observe o que acontece
+            quando conhecimento, decisões e regras vivem
+            fora da sessão.
+          </p>
+
+        </div>
+
+        <span class="lab-card-arrow">
+          →
+        </span>
+
+      </a>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="lab-index-about">
+
+      <span>
+        [ POR QUE LAB? ]
+      </span>
+
+      <div>
+
+        <h2>
+          Pensar também pode
+          produzir artefatos.
+        </h2>
+
+        <p>
+          Um artigo explica uma ideia. Um experimento pode
+          mostrar seu comportamento.
+        </p>
+
+        <p>
+          O objetivo deste espaço é transformar conceitos
+          que surgem de estudo, engenharia e experiência em
+          <strong>coisas que possam ser vistas, executadas,
+          questionadas e reutilizadas.</strong>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

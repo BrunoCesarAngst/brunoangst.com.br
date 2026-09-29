@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Modelo ≠ Sistema — Bruno César Angst</title>
+
+  <meta
+    name="description"
+    content="Troque o modelo de IA e observe o que acontece quando conhecimento, decisões e regras vivem fora da sessão."
+  >
+
+  <link
+    rel="canonical"
+    href="https://brunoangst.com.br/lab/modelo-nao-e-sistema/"
+  >
+
+
+  <!-- OPEN GRAPH -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bruno César Angst">
+
+  <meta
+    property="og:title"
+    content="Modelo ≠ Sistema"
+  >
+
+  <meta
+    property="og:description"
+    content="Troque o modelo. O conhecimento permanece. Um experimento visual sobre IA, contexto e estado externo."
+  >
+
+  <meta
+    property="og:url"
+    content="https://brunoangst.com.br/lab/modelo-nao-e-sistema/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://brunoangst.com.br/lab/modelo-nao-e-sistema/assets/social-card.png"
+  >
+
+  <meta
+    property="og:image:width"
+    content="1200"
+  >
+
+  <meta
+    property="og:image:height"
+    content="630"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Modelo não é sistema. GPT, Claude e modelo local usando conhecimento, decisões e regras persistentes."
+  >
+
+
+  <!-- X / TWITTER -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Modelo ≠ Sistema"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Troque o modelo. O conhecimento permanece."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://brunoangst.com.br/lab/modelo-nao-e-sistema/assets/social-card.png"
+  >
+
+
+  <!-- STRUCTURED DATA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Modelo ≠ Sistema",
+    "description": "Um experimento visual e interativo sobre modelos de IA substituíveis e estado externo persistente.",
+    "url": "https://brunoangst.com.br/lab/modelo-nao-e-sistema/",
+    "inLanguage": "pt-BR",
+    "creator": {
+      "@type": "Person",
+      "name": "Bruno César Angst",
+      "url": "https://brunoangst.com.br/"
+    },
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "Bruno Angst Lab",
+      "url": "https://brunoangst.com.br/lab/"
+    }
+  }
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/style-v4.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./lab.css"
+  >
+</head>
+
+
+<body class="lab-page">
+
+  <main>
+
+
+    <!-- ==================================================
+         HERO
+         ================================================== -->
+
+    <section class="lab-hero">
+
+      <div class="lab-label">
+        LAB #001 · INTELIGÊNCIA ARTIFICIAL
+      </div>
+
+
+      <h1>
+        MODELO
+        <span>≠</span>
+        SISTEMA
+      </h1>
+
+
+      <div class="hero-bottom">
+
+        <p>
+          E se eu trocar o modelo de IA sem perder
+          o que o sistema já aprendeu?
+        </p>
+
+
+        <a href="#experimento">
+          Executar experimento ↓
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         EXPERIMENTO
+         ================================================== -->
+
+    <section
+      class="experiment"
+      id="experimento"
+    >
+
+      <div class="experiment-intro">
+
+        <div>
+
+          <span>
+            EXPERIMENTO INTERATIVO
+          </span>
+
+
+          <h2>
+            Troque o modelo.
+            <br>
+            Veja o que muda.
+          </h2>
+
+        </div>
+
+
+        <p>
+          O modelo é runtime.
+          Conhecimento, decisões e regras
+          permanecem fora dele.
+        </p>
+
+      </div>
+
+
+
+      <!-- WORKBENCH -->
+
+      <div class="workbench">
+
+
+        <!-- CONTROLES -->
+
+        <div class="workbench-controls">
+
+          <span class="workbench-label">
+            01 · ESCOLHA O RUNTIME
+          </span>
+
+
+          <div
+            class="model-picker"
+            role="group"
+            aria-label="Escolha o modelo"
+          >
+
+            <button
+              type="button"
+              class="model-button active"
+              data-model="gpt"
+              aria-pressed="true"
+            >
+              GPT
+            </button>
+
+
+            <button
+              type="button"
+              class="model-button"
+              data-model="claude"
+              aria-pressed="false"
+            >
+              CLAUDE
+            </button>
+
+
+            <button
+              type="button"
+              class="model-button"
+              data-model="local"
+              aria-pressed="false"
+            >
+              LOCAL
+            </button>
+
+          </div>
+
+
+          <div
+            class="change-message"
+            id="change-message"
+            aria-live="polite"
+          >
+            Runtime inicial: GPT
+          </div>
+
+        </div>
+
+
+
+        <!-- STAGE -->
+
+        <div class="experiment-stage">
+
+
+          <!-- RUNTIME -->
+
+          <div
+            class="runtime-card"
+            id="runtime-card"
+          >
+
+            <span class="card-label">
+              RUNTIME
+            </span>
+
+
+            <strong id="current-model">
+              GPT
+            </strong>
+
+
+            <small id="current-provider">
+              OpenAI
+            </small>
+
+
+            <span class="changed-badge">
+              MUTÁVEL
+            </span>
+
+          </div>
+
+
+
+          <!-- FLOW -->
+
+          <div class="flow">
+
+            <span class="flow-line"></span>
+
+            <small>
+              usa
+            </small>
+
+            <span class="flow-arrow">
+              →
+            </span>
+
+          </div>
+
+
+
+          <!-- ESTADO -->
+
+          <div class="state-card">
+
+            <div class="state-card-header">
+
+              <div>
+
+                <span class="card-label">
+                  EXTERNAL STATE
+                </span>
+
+                <strong>
+                  PERSISTENTE
+                </strong>
+
+              </div>
+
+
+              <span class="unchanged-badge">
+                UNCHANGED ✓
+              </span>
+
+            </div>
+
+
+
+            <div class="state-row">
+
+              <span>
+                10
+              </span>
+
+              <strong>
+                KNOWLEDGE
+              </strong>
+
+              <small>
+                o que sabemos
+              </small>
+
+              <b>✓</b>
+
+            </div>
+
+
+
+            <div class="state-row">
+
+              <span>
+                20
+              </span>
+
+              <strong>
+                DECISIONS
+              </strong>
+
+              <small>
+                o que decidimos
+              </small>
+
+              <b>✓</b>
+
+            </div>
+
+
+
+            <div class="state-row">
+
+              <span>
+                30
+              </span>
+
+              <strong>
+                SYSTEM
+              </strong>
+
+              <small>
+                como evoluímos
+              </small>
+
+              <b>✓</b>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- EVIDÊNCIA -->
+
+        <div class="evidence-grid">
+
+
+          <!-- CODE -->
+
+          <div class="code-panel">
+
+            <span class="panel-label">
+              02 · CODE
+            </span>
+
+
+            <pre><code>const agent = createAgent({
+  model: <span id="code-model">"gpt"</span>,
+  state: externalState,
+  tools
+});</code></pre>
+
+          </div>
+
+
+
+          <!-- EXECUTION -->
+
+          <div class="execution-panel">
+
+            <span class="panel-label">
+              03 · OBSERVE
+            </span>
+
+
+            <div class="execution-line">
+
+              <span>
+                runtime
+              </span>
+
+              <strong id="runtime-change">
+                GPT
+              </strong>
+
+            </div>
+
+
+            <div class="execution-line">
+
+              <span>
+                externalState
+              </span>
+
+              <strong class="stable">
+                unchanged ✓
+              </strong>
+
+            </div>
+
+
+            <div class="execution-line">
+
+              <span>
+                context
+              </span>
+
+              <strong class="stable">
+                restored ✓
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         VÍDEO
+         ================================================== -->
+
+    <section class="lab-video">
+
+      <div class="lab-video-intro">
+
+        <div>
+
+          <span>
+            [ EM 30 SEGUNDOS ]
+          </span>
+
+          <h2>
+            Veja o experimento
+            <br>
+            em movimento.
+          </h2>
+
+        </div>
+
+
+        <p>
+          A mesma ideia, agora transformada
+          em uma narrativa visual:
+          o runtime muda enquanto o estado permanece.
+        </p>
+
+      </div>
+
+
+      <div class="video-frame">
+
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="./assets/social-card.png"
+        >
+
+          <source
+            src="./assets/model-vs-system.mp4"
+            type="video/mp4"
+          >
+
+          Seu navegador não suporta reprodução de vídeo.
+
+        </video>
+
+      </div>
+
+
+      <div class="video-caption">
+
+        <span>
+          1080 × 1920 · 30 FPS
+        </span>
+
+        <span>
+          MODEL VS SYSTEM · LAB #001
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         CONCLUSÃO
+         ================================================== -->
+
+    <section class="lab-thesis">
+
+      <span>
+        CONCLUSÃO
+      </span>
+
+
+      <h2>
+        Estado crítico
+        <br>
+        fora do modelo.
+      </h2>
+
+
+      <div class="thesis-bottom">
+
+        <p>
+          O modelo pode ser substituído.
+          O sistema não precisa começar do zero.
+        </p>
+
+
+        <a
+          href="/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/"
+        >
+          Ler o raciocínio completo →
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         CONTEXTO
+         ================================================== -->
+
+    <section class="lab-context">
+
+      <span>
+        [ DE ONDE VEIO ]
+      </span>
+
+
+      <div>
+
+        <h2>
+          Este experimento
+          nasceu de uma pergunta.
+        </h2>
+
+
+        <p>
+          Se uma experiência útil desaparece quando a conversa
+          com a IA termina, o sistema realmente aprendeu alguma coisa?
+        </p>
+
+
+        <p>
+          A hipótese explorada aqui é simples:
+          conhecimento crítico, decisões e regras precisam existir
+          fora do modelo para que possam sobreviver à troca de runtime,
+          sessão ou ferramenta.
+        </p>
+
+
+        <div class="context-links">
+
+          <a
+            href="/blog/ia-esta-tornando-voce-melhor-ou-apenas-mais-rapido/"
+          >
+            Ler o artigo →
+          </a>
+
+
+          <a
+            href="/lab/"
+          >
+            Ver todos os Labs →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <script src="./lab.js"></script>
+
+</body>
+</html>

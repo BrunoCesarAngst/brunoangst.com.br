@@ -1,0 +1,1429 @@
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.lab-page {
+  margin: 0;
+
+  background:
+    var(--tinta);
+
+  color:
+    var(--papel);
+}
+
+.lab-page main {
+  overflow:
+    hidden;
+}
+
+.lab-page button {
+  font:
+    inherit;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.lab-hero {
+  max-width:
+    1600px;
+
+  margin:
+    auto;
+
+  padding:
+    clamp(55px, 6vw, 90px)
+    4vw
+    clamp(45px, 5vw, 75px);
+
+  border-bottom:
+    1px solid
+    #ffffff25;
+}
+
+.lab-label,
+.workbench-label,
+.card-label,
+.panel-label,
+.experiment-intro > div > span,
+.lab-video-intro > div > span,
+.lab-thesis > span,
+.lab-context > span {
+  font:
+    500
+    9px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .14em;
+
+  text-transform:
+    uppercase;
+}
+
+.lab-label {
+  color:
+    var(--lima);
+}
+
+.lab-hero h1 {
+  margin:
+    clamp(25px, 3vw, 45px)
+    0
+    clamp(28px, 3vw, 45px);
+
+  font-size:
+    clamp(
+      62px,
+      9vw,
+      138px
+    );
+
+  line-height:
+    .8;
+
+  letter-spacing:
+    -.085em;
+}
+
+.lab-hero h1 span {
+  color:
+    var(--lima);
+}
+
+.hero-bottom {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-end;
+
+  gap:
+    40px;
+}
+
+.hero-bottom p {
+  max-width:
+    680px;
+
+  margin:
+    0;
+
+  color:
+    #c6c6c1;
+
+  font-size:
+    clamp(
+      18px,
+      1.7vw,
+      25px
+    );
+
+  line-height:
+    1.5;
+}
+
+.hero-bottom a {
+  flex:
+    0 0 auto;
+
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    var(--papel);
+
+  font:
+    500
+    10px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .04em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   EXPERIMENTO
+   ========================================================= */
+
+.experiment {
+  padding:
+    clamp(55px, 6vw, 90px)
+    4vw
+    clamp(70px, 7vw, 110px);
+}
+
+.experiment-intro {
+  display:
+    grid;
+
+  grid-template-columns:
+    1.5fr
+    .65fr;
+
+  align-items:
+    end;
+
+  gap:
+    5vw;
+
+  max-width:
+    1500px;
+
+  margin:
+    0
+    auto
+    clamp(30px, 3vw, 45px);
+}
+
+.experiment-intro > div > span {
+  color:
+    #777;
+}
+
+.experiment-intro h2 {
+  margin:
+    14px
+    0
+    0;
+
+  font-size:
+    clamp(
+      38px,
+      4.7vw,
+      70px
+    );
+
+  line-height:
+    .96;
+
+  letter-spacing:
+    -.06em;
+}
+
+.experiment-intro p {
+  margin:
+    0;
+
+  color:
+    #94958f;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.65;
+}
+
+
+/* =========================================================
+   WORKBENCH
+   ========================================================= */
+
+.workbench {
+  max-width:
+    1500px;
+
+  margin:
+    auto;
+
+  border:
+    1px solid
+    #ffffff30;
+}
+
+
+/* =========================================================
+   CONTROLES
+   ========================================================= */
+
+.workbench-controls {
+  display:
+    grid;
+
+  grid-template-columns:
+    210px
+    minmax(300px, 1fr)
+    320px;
+
+  align-items:
+    center;
+
+  gap:
+    20px;
+
+  min-height:
+    74px;
+
+  padding:
+    12px
+    18px;
+
+  border-bottom:
+    1px solid
+    #ffffff30;
+}
+
+.workbench-label,
+.card-label,
+.panel-label {
+  color:
+    #74766f;
+}
+
+.model-picker {
+  display:
+    flex;
+
+  gap:
+    8px;
+}
+
+.model-button {
+  min-width:
+    100px;
+
+  min-height:
+    44px;
+
+  padding:
+    10px
+    18px;
+
+  border:
+    1px solid
+    #ffffff30;
+
+  background:
+    transparent;
+
+  color:
+    var(--papel);
+
+  cursor:
+    pointer;
+
+  font:
+    500
+    11px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .02em;
+
+  transition:
+    background .18s ease,
+    border-color .18s ease,
+    color .18s ease;
+}
+
+.model-button:hover {
+  border-color:
+    var(--lima);
+}
+
+.model-button:focus-visible {
+  outline:
+    2px solid
+    var(--lima);
+
+  outline-offset:
+    3px;
+}
+
+.model-button.active {
+  border-color:
+    var(--lima);
+
+  background:
+    var(--lima);
+
+  color:
+    var(--tinta);
+}
+
+.change-message {
+  color:
+    #8c8e87;
+
+  text-align:
+    right;
+
+  font:
+    400
+    10px / 1.45
+    "DM Mono",
+    monospace;
+}
+
+
+/* =========================================================
+   STAGE
+   ========================================================= */
+
+.experiment-stage {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(230px, .75fr)
+    110px
+    minmax(430px, 1.5fr);
+
+  min-height:
+    280px;
+}
+
+
+/* =========================================================
+   RUNTIME
+   ========================================================= */
+
+.runtime-card {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  position:
+    relative;
+
+  min-width:
+    0;
+
+  padding:
+    30px;
+
+  border-right:
+    1px solid
+    #ffffff30;
+}
+
+.runtime-card strong {
+  display:
+    block;
+
+  margin:
+    10px
+    0
+    2px;
+
+  font-size:
+    clamp(
+      42px,
+      5vw,
+      72px
+    );
+
+  line-height:
+    .95;
+
+  letter-spacing:
+    -.06em;
+}
+
+.runtime-card small {
+  color:
+    #8b8c87;
+
+  font:
+    400
+    10px
+    "DM Mono",
+    monospace;
+}
+
+.changed-badge {
+  position:
+    absolute;
+
+  top:
+    22px;
+
+  right:
+    22px;
+
+  padding:
+    5px
+    7px;
+
+  border:
+    1px solid
+    #ffffff2e;
+
+  color:
+    #777;
+
+  font:
+    500
+    8px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .1em;
+}
+
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.flow {
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  border-right:
+    1px solid
+    #ffffff30;
+
+  color:
+    #6f716b;
+}
+
+.flow-line {
+  width:
+    20px;
+
+  height:
+    1px;
+
+  background:
+    #ffffff32;
+}
+
+.flow small {
+  font:
+    400
+    8px
+    "DM Mono",
+    monospace;
+
+  text-transform:
+    uppercase;
+}
+
+.flow-arrow {
+  color:
+    var(--lima);
+
+  font-size:
+    20px;
+}
+
+
+/* =========================================================
+   EXTERNAL STATE
+   ========================================================= */
+
+.state-card {
+  display:
+    grid;
+
+  grid-template-rows:
+    auto
+    repeat(3, 1fr);
+
+  min-width:
+    0;
+}
+
+.state-card-header {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    20px;
+
+  padding:
+    17px
+    22px;
+
+  border-bottom:
+    1px solid
+    #ffffff30;
+}
+
+.state-card-header strong {
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  color:
+    var(--lima);
+
+  font:
+    500
+    10px
+    "DM Mono",
+    monospace;
+}
+
+.unchanged-badge {
+  flex:
+    0 0 auto;
+
+  padding:
+    6px
+    8px;
+
+  background:
+    var(--lima);
+
+  color:
+    var(--tinta);
+
+  font:
+    500
+    8px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .05em;
+}
+
+.state-row {
+  display:
+    grid;
+
+  grid-template-columns:
+    40px
+    minmax(100px, 1fr)
+    minmax(120px, 1fr)
+    25px;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding:
+    12px
+    22px;
+
+  border-bottom:
+    1px solid
+    #ffffff1e;
+}
+
+.state-row:last-child {
+  border-bottom:
+    0;
+}
+
+.state-row > span {
+  color:
+    var(--lima);
+
+  font:
+    500
+    10px
+    "DM Mono",
+    monospace;
+}
+
+.state-row strong {
+  font-size:
+    14px;
+}
+
+.state-row small {
+  color:
+    #73756f;
+
+  font:
+    400
+    9px
+    "DM Mono",
+    monospace;
+}
+
+.state-row b {
+  color:
+    var(--lima);
+
+  font-weight:
+    400;
+}
+
+
+/* =========================================================
+   EVIDÊNCIA
+   ========================================================= */
+
+.evidence-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  border-top:
+    1px solid
+    #ffffff30;
+}
+
+.code-panel,
+.execution-panel {
+  min-width:
+    0;
+
+  padding:
+    22px;
+}
+
+.code-panel {
+  border-right:
+    1px solid
+    #ffffff30;
+}
+
+.panel-label {
+  display:
+    block;
+
+  margin-bottom:
+    15px;
+}
+
+.lab-page pre {
+  margin:
+    0;
+
+  overflow-x:
+    auto;
+}
+
+.lab-page code {
+  font:
+    400
+    12px / 1.65
+    "DM Mono",
+    monospace;
+}
+
+#code-model {
+  color:
+    var(--lima);
+
+  font-weight:
+    500;
+}
+
+.execution-line {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    30px;
+
+  padding:
+    7px
+    0;
+
+  border-bottom:
+    1px solid
+    #ffffff17;
+
+  font:
+    400
+    10px
+    "DM Mono",
+    monospace;
+}
+
+.execution-line:last-child {
+  border-bottom:
+    0;
+}
+
+.execution-line span {
+  color:
+    #73756f;
+}
+
+.execution-line strong {
+  font-weight:
+    400;
+}
+
+.execution-line .stable {
+  color:
+    var(--lima);
+}
+
+
+/* =========================================================
+   ANIMAÇÃO
+   ========================================================= */
+
+.runtime-changing {
+  animation:
+    runtime-change
+    .45s
+    ease;
+}
+
+@keyframes runtime-change {
+
+  0% {
+    background:
+      transparent;
+  }
+
+  35% {
+    background:
+      #c7ff3d18;
+  }
+
+  100% {
+    background:
+      transparent;
+  }
+
+}
+
+
+/* =========================================================
+   VÍDEO
+   ========================================================= */
+
+.lab-video {
+  padding:
+    clamp(75px, 9vw, 135px)
+    4vw;
+
+  background:
+    var(--papel);
+
+  color:
+    var(--tinta);
+}
+
+.lab-video-intro {
+  display:
+    grid;
+
+  grid-template-columns:
+    1.5fr
+    .65fr;
+
+  align-items:
+    end;
+
+  gap:
+    5vw;
+
+  max-width:
+    1500px;
+
+  margin:
+    0
+    auto
+    clamp(45px, 5vw, 75px);
+}
+
+.lab-video-intro > div > span {
+  color:
+    #74766f;
+}
+
+.lab-video-intro h2 {
+  margin:
+    15px
+    0
+    0;
+
+  font-size:
+    clamp(
+      42px,
+      6vw,
+      86px
+    );
+
+  line-height:
+    .94;
+
+  letter-spacing:
+    -.065em;
+}
+
+.lab-video-intro p {
+  max-width:
+    500px;
+
+  margin:
+    0;
+
+  color:
+    #62645e;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+}
+
+.video-frame {
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  max-width:
+    1500px;
+
+  margin:
+    auto;
+
+  padding:
+    clamp(25px, 4vw, 60px);
+
+  background:
+    var(--tinta);
+}
+
+.video-frame video {
+  display:
+    block;
+
+  width:
+    min(100%, 430px);
+
+  height:
+    auto;
+
+  background:
+    var(--tinta);
+
+  border:
+    1px solid
+    #ffffff25;
+}
+
+.video-caption {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  max-width:
+    1500px;
+
+  margin:
+    15px
+    auto
+    0;
+
+  color:
+    #74766f;
+
+  font:
+    500
+    9px
+    "DM Mono",
+    monospace;
+
+  letter-spacing:
+    .08em;
+}
+
+
+/* =========================================================
+   CONCLUSÃO
+   ========================================================= */
+
+.lab-thesis {
+  padding:
+    clamp(80px, 9vw, 140px)
+    4vw;
+
+  background:
+    var(--lima);
+
+  color:
+    var(--tinta);
+}
+
+.lab-thesis > span {
+  display:
+    block;
+
+  max-width:
+    1500px;
+
+  margin:
+    auto;
+}
+
+.lab-thesis h2 {
+  max-width:
+    1500px;
+
+  margin:
+    clamp(30px, 4vw, 55px)
+    auto;
+
+  font-size:
+    clamp(
+      58px,
+      10vw,
+      150px
+    );
+
+  line-height:
+    .84;
+
+  letter-spacing:
+    -.08em;
+}
+
+.thesis-bottom {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-end;
+
+  gap:
+    40px;
+
+  max-width:
+    1500px;
+
+  margin:
+    auto;
+}
+
+.thesis-bottom p {
+  max-width:
+    650px;
+
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      18px,
+      1.8vw,
+      27px
+    );
+
+  line-height:
+    1.5;
+}
+
+.thesis-bottom a {
+  flex:
+    0 0 auto;
+
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    var(--tinta);
+
+  font:
+    500
+    10px
+    "DM Mono",
+    monospace;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   CONTEXTO
+   ========================================================= */
+
+.lab-context {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr
+    2fr;
+
+  gap:
+    6vw;
+
+  padding:
+    clamp(75px, 9vw, 140px)
+    4vw;
+
+  background:
+    var(--tinta);
+
+  color:
+    var(--papel);
+}
+
+.lab-context > span {
+  color:
+    #74766f;
+}
+
+.lab-context > div {
+  max-width:
+    850px;
+}
+
+.lab-context h2 {
+  margin:
+    0
+    0
+    35px;
+
+  font-size:
+    clamp(
+      40px,
+      5vw,
+      72px
+    );
+
+  line-height:
+    .98;
+
+  letter-spacing:
+    -.06em;
+}
+
+.lab-context p {
+  max-width:
+    760px;
+
+  color:
+    #a8aaa3;
+
+  font-size:
+    16px;
+
+  line-height:
+    1.85;
+}
+
+.context-links {
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    30px;
+
+  margin-top:
+    40px;
+}
+
+.context-links a {
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    var(--papel);
+
+  font:
+    500
+    10px
+    "DM Mono",
+    monospace;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .lab-hero {
+    padding:
+      60px
+      5vw
+      50px;
+  }
+
+  .lab-hero h1 {
+    margin:
+      35px
+      0;
+
+    font-size:
+      18vw;
+  }
+
+  .hero-bottom {
+    display:
+      block;
+  }
+
+  .hero-bottom p {
+    margin-bottom:
+      30px;
+  }
+
+
+  .experiment {
+    padding:
+      65px
+      4vw
+      80px;
+  }
+
+  .experiment-intro,
+  .lab-video-intro {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+
+    margin-bottom:
+      30px;
+  }
+
+
+  .workbench-controls {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      14px;
+
+    padding:
+      18px;
+  }
+
+  .model-picker {
+    display:
+      grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .model-button {
+    min-width:
+      0;
+
+    padding-left:
+      6px;
+
+    padding-right:
+      6px;
+
+    text-align:
+      center;
+  }
+
+  .change-message {
+    text-align:
+      left;
+  }
+
+
+  .experiment-stage {
+    grid-template-columns:
+      1fr;
+
+    min-height:
+      auto;
+  }
+
+  .runtime-card {
+    min-height:
+      180px;
+
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      #ffffff30;
+  }
+
+  .flow {
+    min-height:
+      55px;
+
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      #ffffff30;
+  }
+
+  .flow-line {
+    width:
+      50px;
+  }
+
+
+  .state-row {
+    grid-template-columns:
+      35px
+      1fr
+      25px;
+  }
+
+  .state-row small {
+    display:
+      none;
+  }
+
+
+  .evidence-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .code-panel {
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      #ffffff30;
+  }
+
+
+  .lab-video {
+    padding:
+      75px
+      5vw;
+  }
+
+  .video-frame {
+    padding:
+      25px
+      10px;
+  }
+
+  .video-frame video {
+    width:
+      min(100%, 390px);
+  }
+
+  .video-caption {
+    flex-direction:
+      column;
+
+    gap:
+      5px;
+  }
+
+
+  .lab-thesis {
+    padding:
+      85px
+      5vw;
+  }
+
+  .lab-thesis h2 {
+    font-size:
+      16vw;
+  }
+
+  .thesis-bottom {
+    display:
+      block;
+  }
+
+  .thesis-bottom p {
+    margin-bottom:
+      35px;
+  }
+
+
+  .lab-context {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      35px;
+
+    padding:
+      80px
+      5vw;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .runtime-changing {
+    animation:
+      none;
+  }
+
+}
