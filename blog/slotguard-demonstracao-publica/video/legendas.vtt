@@ -1,0 +1,101 @@
+WEBVTT
+
+1
+00:00:00.650 --> 00:00:05.122
+O SlotGuard saiu do núcleo de regras e
+ganhou uma aplicação no ar.
+
+2
+00:00:05.722 --> 00:00:10.130
+Agora você pode consultar, reservar e
+acompanhar a agenda na tela.
+
+3
+00:00:11.517 --> 00:00:15.050
+A interface apresenta os horários e
+conversa com a API.
+
+4
+00:00:15.650 --> 00:00:19.717
+As regras de negócio continuam concentradas
+no domínio Python.
+
+5
+00:00:21.117 --> 00:00:24.522
+A agenda começa com uma reserva das nove às
+dez.
+
+6
+00:00:25.122 --> 00:00:30.063
+Consultar das dez às onze confirma que
+horários consecutivos são permitidos.
+
+7
+00:00:31.450 --> 00:00:34.770
+Ao reservar, a API devolve a agenda
+atualizada.
+
+8
+00:00:35.370 --> 00:00:39.778
+A lista passa a mostrar os dois intervalos,
+com a confirmação na interface.
+
+9
+00:00:41.183 --> 00:00:45.869
+Uma nova tentativa para o mesmo horário
+recebe uma resposta de conflito.
+
+10
+00:00:46.469 --> 00:00:51.175
+A mensagem explica a rejeição, e as
+reservas aceitas são preservadas.
+
+11
+00:00:52.583 --> 00:00:56.693
+Durante a reserva, os campos e os dois
+botões ficam bloqueados.
+
+12
+00:00:57.293 --> 00:01:02.277
+Ao editar horários, a consulta descarta
+respostas antigas e limpa a mensagem.
+
+13
+00:01:03.683 --> 00:01:07.963
+A etapa publicada reúne cento e quatorze
+testes automatizados.
+
+14
+00:01:08.563 --> 00:01:12.801
+Eles cobrem o domínio, a interface e a
+comunicação com a API real.
+
+15
+00:01:14.183 --> 00:01:17.994
+Interface e API são empacotadas juntas em
+um contêiner.
+
+16
+00:01:18.594 --> 00:01:23.386
+O fluxo de verificação testa esse pacote no
+Linux antes da publicação.
+
+17
+00:01:24.783 --> 00:01:29.447
+A demonstração está no Render gratuito, mas
+a agenda ainda fica em memória.
+
+18
+00:01:30.047 --> 00:01:35.351
+Recarregar restaura o início. Persistência
+e concorrência são os próximos desafios.
+
+19
+00:01:36.750 --> 00:01:40.689
+Experimente o SlotGuard e conheça as
+decisões no artigo.
+
+20
+00:01:41.289 --> 00:01:46.123
+O projeto continua evoluindo, um
+comportamento verificável de cada vez.

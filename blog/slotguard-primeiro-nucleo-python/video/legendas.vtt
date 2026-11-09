@@ -1,0 +1,90 @@
+WEBVTT
+
+1
+00:00:00.650 --> 00:00:04.162
+Como um sistema decide se pode aceitar uma
+reserva?
+
+2
+00:00:04.762 --> 00:00:07.869
+Foi com essa pergunta que comecei o
+SlotGuard.
+
+3
+00:00:09.250 --> 00:00:12.293
+Uma reserva ocupa das nove às dez da manhã.
+
+4
+00:00:12.893 --> 00:00:16.725
+Outra, das nove e meia às dez e meia,
+precisa ser rejeitada.
+
+5
+00:00:18.117 --> 00:00:21.437
+Mas uma reserva das dez às onze pode ser
+aceita.
+
+6
+00:00:22.037 --> 00:00:25.293
+O fim de um intervalo não ocupa o início do
+próximo.
+
+7
+00:00:26.683 --> 00:00:30.217
+O núcleo usa horários em minutos e modelos
+imutáveis.
+
+8
+00:00:30.817 --> 00:00:35.246
+Os intervalos têm duração positiva e ficam
+dentro de um único dia.
+
+9
+00:00:36.650 --> 00:00:40.439
+Ao aceitar uma reserva, o domínio devolve
+uma nova agenda.
+
+10
+00:00:41.039 --> 00:00:45.277
+A agenda anterior continua intacta, e o
+conflito sinaliza um erro.
+
+11
+00:00:46.683 --> 00:00:50.281
+O desenvolvimento avança em pequenos ciclos
+de testes.
+
+12
+00:00:50.881 --> 00:00:55.033
+Primeiro observo a falha. Depois
+implemento, verifico e reviso.
+
+13
+00:00:56.417 --> 00:01:00.697
+Esta primeira etapa reúne quarenta e três
+testes automatizados.
+
+14
+00:01:01.297 --> 00:01:06.494
+Exemplos e testes de propriedades verificam
+limites e preservação da agenda.
+
+15
+00:01:07.883 --> 00:01:12.078
+Nesse registro, ainda não havia interface,
+API ou persistência.
+
+16
+00:01:12.678 --> 00:01:17.129
+A proposta era consolidar o domínio antes
+de conectar novas camadas.
+
+17
+00:01:18.517 --> 00:01:22.946
+No artigo, compartilho o processo, as
+decisões e os próximos passos.
+
+18
+00:01:23.546 --> 00:01:27.186
+Essa base abre caminho para a segunda etapa
+do SlotGuard.
